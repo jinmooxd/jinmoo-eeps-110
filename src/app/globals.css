@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f4efe6;
+  --foreground: #2a2825;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-bone: #f4efe6;
+  --color-basalt: #2a2825;
+  --color-magma: #b23a1f;
+  --color-ember: #e76f3c;
+  --color-sediment: #c9a96e;
+  --color-slate-blue: #4a5d6b;
+  --color-moss: #6b7f4a;
+  --color-ash: #8a857c;
+  --font-serif: var(--font-display);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), sans-serif;
+  line-height: 1.65;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display), serif;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: clamp(3rem, 8vw, 5rem);
+  line-height: 0.98;
+}
+
+h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.05;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3.5vw, 1.75rem);
+}
+
+.mono-label {
+  font-family: var(--font-mono), monospace;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.grain-overlay {
+  position: relative;
+}
+
+.grain-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("/textures/grain.svg");
+  opacity: 0.04;
+  mix-blend-mode: multiply;
+  z-index: 0;
+}
+
+.hairline {
+  border-color: rgb(42 40 37 / 15%);
+}
+
+*:focus-visible {
+  outline: 2px solid #e76f3c;
+  outline-offset: 2px;
+}
