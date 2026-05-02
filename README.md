@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Interactive Rock Cycle Website
 
-## Getting Started
+EEPS 110 interactive geology project built with Next.js App Router, TypeScript, Tailwind CSS v4, and Framer Motion.
 
-First, run the development server:
+## Local Development
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## GitHub Pages Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This repo is configured for GitHub Pages static export via `.github/workflows/deploy-gh-pages.yml`.
 
-## Learn More
+### One-time repository settings
+- In GitHub: `Settings -> Pages`
+- Set `Source` to `GitHub Actions`
 
-To learn more about Next.js, take a look at the following resources:
+### Deploy flow
+- Push to `main`
+- GitHub Action builds with `next build` (`output: "export"`) and deploys `out/`
+- Site publishes to your Pages URL automatically
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Base path behavior
+- For project repos (`username/repo`), the app auto-uses `/<repo>` as `basePath` in CI.
+- For user/org repos (`username.github.io`), it deploys at root `/`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Production Build Check
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run build
+```
