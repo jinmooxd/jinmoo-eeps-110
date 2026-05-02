@@ -21,14 +21,14 @@ const nodes = [
 ];
 
 const arrows: Arrow[] = [
-  { id: "i-s", from: "igneous", to: "sedimentary", label: "weathering & erosion", d: "M170 172 C130 230 130 290 170 320" },
-  { id: "s-s", from: "sedimentary", to: "sedimentary", label: "re-erosion & redeposition", d: "M140 350 C70 300 70 400 150 372" },
-  { id: "s-m", from: "sedimentary", to: "metamorphic", label: "heat & pressure", d: "M205 330 C300 310 350 280 405 258" },
-  { id: "m-m", from: "metamorphic", to: "metamorphic", label: "further metamorphism", d: "M450 205 C530 180 560 300 450 285" },
-  { id: "m-mag", from: "metamorphic", to: "magma", label: "melting", d: "M410 220 C300 170 250 120 190 66" },
-  { id: "mag-i", from: "magma", to: "igneous", label: "cooling & crystallization", d: "M170 62 C170 90 170 110 170 128" },
-  { id: "i-m", from: "igneous", to: "metamorphic", label: "heat & pressure (without erosion first)", d: "M206 162 C285 178 335 208 404 236" },
-  { id: "m-s", from: "metamorphic", to: "sedimentary", label: "uplift, weathering & erosion", d: "M410 270 C300 340 240 360 188 354" },
+  { id: "i-s", from: "igneous", to: "sedimentary", label: "Weathering & Erosion", d: "M170 172 C130 230 130 290 170 320" },
+  { id: "s-s", from: "sedimentary", to: "sedimentary", label: "Re-erosion & Redeposition", d: "M140 350 C70 300 70 400 150 372" },
+  { id: "s-m", from: "sedimentary", to: "metamorphic", label: "Heat & Pressure", d: "M205 330 C300 310 350 280 405 258" },
+  { id: "m-m", from: "metamorphic", to: "metamorphic", label: "Further Metamorphism", d: "M450 205 C530 180 560 300 450 285" },
+  { id: "m-mag", from: "metamorphic", to: "magma", label: "Melting", d: "M410 220 C300 170 250 120 190 66" },
+  { id: "mag-i", from: "magma", to: "igneous", label: "Cooling & Crystallization", d: "M170 62 C170 90 170 110 170 128" },
+  { id: "i-m", from: "igneous", to: "metamorphic", label: "Heat & Pressure (Without Erosion First)", d: "M206 162 C285 178 335 208 404 236" },
+  { id: "m-s", from: "metamorphic", to: "sedimentary", label: "Uplift, Weathering & Erosion", d: "M410 270 C300 340 240 360 188 354" },
 ];
 
 export function RockCycleDiagram() {
